@@ -1,0 +1,213 @@
+[
+  {
+    "id": "techball-web",
+    "slug": "techball-web",
+    "title": "TECHball web",
+    "subtitle": "Football Manager verileri için yerel analiz arayüzü",
+    "description": "Football Manager oyuncu verilerini arama, filtreleme, taktik tahtasında değerlendirme ve Scout AI ile inceleme olanağı sunan yerel web uygulaması.",
+    "detailDescription": "TECHball, geniş bir oyuncu havuzunda aday bulma, karşılaştırma ve kadro kurma işlerini tek yerde toplayan yerel bir futbolcu keşif prototipi. Filtrelerle veya doğal dilde sorularla yapılan aramaları, veriye dayalı sonuçlarla incelemeyi kolaylaştırıyor.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Vite", "Python", "SQLite"],
+    "tags": ["Veri arayüzü", "Futbol", "Yapay zekâ"],
+    "layout": "wide",
+    "narrativeKey": "techball",
+    "cover": {
+      "type": "image",
+      "src": "/projects/techball-web/01-oyuncular.png",
+      "alt": "TECHball oyuncu listesi, filtreler ve taktik tahtası"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/techball-web/02-scout-ai.png",
+        "alt": "TECHball Scout AI yanıtı ve oyuncu sorgusu sonuçları"
+      }
+    ],
+    "featured": true,
+    "order": 0,
+    "status": "prototype"
+  },
+  {
+    "id": "yatatodo",
+    "slug": "yatatodo",
+    "title": "yatatodo",
+    "subtitle": "Günlük planlama destekli kişisel görev listesi",
+    "description": "Görev ekleme, düzenleme, filtreleme ve önceliklendirmeyi Gemini Flash destekli günlük planlama akışıyla birleştiren React uygulaması.",
+    "detailDescription": "Yatatodo, yapılacak işleri kaydetmenin ötesinde, günün sınırlı zamanını hangi görevlere ayıracağını düşünmeye yardımcı olan kişisel bir görev uygulaması. Gemini Flash destekli planlama, kararın kendisini kullanıcıya bırakan bir sıra ve süre önerisi sunuyor.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Vite", "Gemini Flash"],
+    "tags": ["Üretkenlik", "Planlama"],
+    "layout": "standard",
+    "narrativeKey": "yatatodo",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yatatodo/01-gorevler-ve-plan.png",
+      "alt": "yatatodo görev listesi, öncelikler ve oluşturulmuş günlük plan"
+    },
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/01"
+    },
+    "featured": true,
+    "order": 1,
+    "status": "demo"
+  },
+  {
+    "id": "yataquizing",
+    "slug": "yataquizing",
+    "title": "YataQuizing",
+    "subtitle": "JSON dosyalarıyla çalışan süreli quiz deneyimi",
+    "description": "Kullanıcının yüklediği JSON sorularıyla sınav başlatan; süre, ilerleme, cevap takibi ve açıklamalı sonuç ekranı sunan web uygulaması.",
+    "year": 2026,
+    "stack": ["React", "Vite", "CSS", "JSON"],
+    "tags": ["Eğitim", "Quiz"],
+    "layout": "standard",
+    "narrativeKey": "yataquizing",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yataquizing/01-quiz-secimi.png",
+      "alt": "YataQuizing quiz seçimi ve JSON dosyası yükleme ekranı"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yataquizing/02-soru.png",
+        "alt": "YataQuizing süreli soru ekranı ve cevap seçenekleri"
+      },
+      {
+        "type": "image",
+        "src": "/projects/yataquizing/03-sonuc.png",
+        "alt": "YataQuizing sınav sonucu, skor ve cevap özeti"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/02"
+    },
+    "featured": true,
+    "order": 2,
+    "status": "demo"
+  },
+  {
+    "id": "yataclimate",
+    "slug": "yataclimate",
+    "title": "YataClimate",
+    "subtitle": "Canlı hava durumu ve yedi günlük tahmin",
+    "description": "Şehir araması, anlık hava özeti, saatlik görünüm ve yedi günlük tahmini bir araya getiren hava durumu uygulaması.",
+    "detailDescription": "YataClimate, farklı şehirlerin güncel hava koşullarını ve tahminlerini okunabilir kartlar ile şehir detaylarında bir araya getiriyor. Sıcaklık bilgisini; saatlik değişim, yağış, rüzgâr ve haftalık görünümle birlikte sunarak günlük plan yapmayı kolaylaştırıyor.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Vinext", "Open-Meteo"],
+    "tags": ["Hava durumu", "Veri"],
+    "layout": "standard",
+    "narrativeKey": "yataclimate",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yataclimate/01-sehirler.png",
+      "alt": "YataClimate şehir kartları ve anlık hava durumu özeti"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yataclimate/02-sehir-detayi.png",
+        "alt": "YataClimate Bursa hava durumu ve saatlik tahmin ekranı"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/03"
+    },
+    "featured": true,
+    "order": 3,
+    "status": "demo"
+  },
+  {
+    "id": "yata-market",
+    "slug": "yata-market",
+    "title": "Yata Market",
+    "subtitle": "Ürün kataloğu ve sepet akışlı e-ticaret demosu",
+    "description": "Ürün arama, kategori ve fiyat filtreleri, favoriler, kalıcı sepet ve demo ürün yönetimini Express API ile birleştiren tam yığın uygulama.",
+    "detailDescription": "Yata Market, ürün keşfinden sepete uzanan temel alışveriş akışını kuran bir e-ticaret demosu. Katalog, ürün detayı, favoriler, sepet ve demo ürün yönetimi aynı React arayüzü ile Express API üzerinde çalışıyor.",
+    "year": 2026,
+    "stack": ["React", "Vite", "Express", "JavaScript"],
+    "tags": ["E-ticaret", "Tam yığın"],
+    "layout": "standard",
+    "narrativeKey": "yataMarket",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yata-market/01-katalog.png",
+      "alt": "Yata Market ürün kataloğu, arama ve filtre kontrolleri"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yata-market/02-sepet.png",
+        "alt": "Yata Market sepeti, ürün adetleri ve sipariş özeti"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/04-05"
+    },
+    "featured": true,
+    "order": 4,
+    "status": "demo"
+  },
+  {
+    "id": "kisisel-kitaplik",
+    "slug": "kisisel-kitaplik",
+    "title": "Kişisel Kitaplık",
+    "subtitle": "Kitap, yazar ve okuma günlüğü altyapısı",
+    "description": "Yazarları ve kitapları yönetmek için React arayüzü; kitaplara bağlı not ve alıntılar için Express API sunan yerel eğitim uygulaması.",
+    "detailDescription": "Kişisel Kitaplık, yazar ve kitap kayıtlarını düzenleyen yerel bir eğitim uygulaması. İlişkisel katalog verilerini PostgreSQL'de, kitaplara bağlı not ve alıntıların API altyapısını MongoDB'de ele alarak iki veri modelinin sorumluluklarını ayırıyor.",
+    "year": 2026,
+    "stack": ["React", "Vite", "Express", "PostgreSQL", "MongoDB"],
+    "tags": ["Kitaplık", "Veritabanı"],
+    "layout": "standard",
+    "narrativeKey": "kisiselKitaplik",
+    "cover": {
+      "type": "image",
+      "src": "/projects/kisisel-kitaplik/01-kitapligim.png",
+      "alt": "Kişisel Kitaplık kitap listesi, arama ve okuma durumu filtresi"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/kisisel-kitaplik/02-yazarlar.png",
+        "alt": "Kişisel Kitaplık yazar listesi ve yazar düzenleme formu"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/DB-Task-1"
+    },
+    "featured": true,
+    "order": 5,
+    "status": "educational"
+  },
+  {
+    "id": "yataoil",
+    "slug": "yataoil",
+    "title": "YataOil",
+    "subtitle": "Araç ilanı ve yakıt maliyeti inceleme akışı",
+    "description": "Marka ve ilan aramasını araç detayları ve yakıt maliyeti ekranıyla birleştiren araştırma prototipi.",
+    "detailDescription": "YataOil, ikinci el araç ilanını ve kullanım maliyetini aynı akışta değerlendirmeyi amaçlıyor. İlan listesi ve yakıt maliyeti ekranı mevcut; canlı dış servis entegrasyonlarının kapsamı ayrıca doğrulanmalı.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Express", "Puppeteer", "Zod"],
+    "tags": ["Otomotiv", "Veri entegrasyonu"],
+    "layout": "standard",
+    "narrativeKey": "yataoil",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yataoil/01-ilanlar.jpeg",
+      "alt": "YataOil Audi araç ilanları listesi"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yataoil/02-maliyet.jpeg",
+        "alt": "YataOil araç detayı ve yakıt maliyeti hesabı"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/Task-%C4%B0lan-Yak%C4%B1t-Hesaplay%C4%B1c%C4%B1-App"
+    },
+    "featured": true,
+    "order": 6,
+    "status": "prototype"
+  }
+]

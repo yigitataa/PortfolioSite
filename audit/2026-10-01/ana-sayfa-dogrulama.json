@@ -1,0 +1,422 @@
+[
+  {
+    "dockTop": 500,
+    "height": 568,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 48,
+        "text": "Ana sayfa",
+        "width": 67.90625
+      },
+      {
+        "height": 48,
+        "text": "Projelerim",
+        "width": 70.40625
+      },
+      {
+        "height": 48,
+        "text": "Hakkımda",
+        "width": 69.1015625
+      },
+      {
+        "height": 48,
+        "text": "İletişim",
+        "width": 52.65625
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 487.25,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-light-1600.webp",
+    "theme": "light",
+    "width": 320
+  },
+  {
+    "dockTop": 776,
+    "height": 844,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 48,
+        "text": "Ana sayfa",
+        "width": 67.90625
+      },
+      {
+        "height": 48,
+        "text": "Projelerim",
+        "width": 70.40625
+      },
+      {
+        "height": 48,
+        "text": "Hakkımda",
+        "width": 69.1015625
+      },
+      {
+        "height": 48,
+        "text": "İletişim",
+        "width": 52.65625
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 465.6484375,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-light-1600.webp",
+    "theme": "light",
+    "width": 390
+  },
+  {
+    "dockTop": 0,
+    "height": 1024,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 763.796875,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-light-1600.webp",
+    "theme": "light",
+    "width": 768
+  },
+  {
+    "dockTop": 0,
+    "height": 768,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 635.3828125,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-light-1600.webp",
+    "theme": "light",
+    "width": 1024
+  },
+  {
+    "dockTop": 0,
+    "height": 720,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 624.65625,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-light-1600.webp",
+    "theme": "light",
+    "width": 1280
+  },
+  {
+    "dockTop": 0,
+    "height": 900,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 723.4140625,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-light-1600.webp",
+    "theme": "light",
+    "width": 1440
+  },
+  {
+    "dockTop": 500,
+    "height": 568,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 48,
+        "text": "Ana sayfa",
+        "width": 67.90625
+      },
+      {
+        "height": 48,
+        "text": "Projelerim",
+        "width": 70.40625
+      },
+      {
+        "height": 48,
+        "text": "Hakkımda",
+        "width": 69.1015625
+      },
+      {
+        "height": 48,
+        "text": "İletişim",
+        "width": 52.65625
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 487.25,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-dark-1600.webp",
+    "theme": "dark",
+    "width": 320
+  },
+  {
+    "dockTop": 776,
+    "height": 844,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 48,
+        "text": "Ana sayfa",
+        "width": 67.90625
+      },
+      {
+        "height": 48,
+        "text": "Projelerim",
+        "width": 70.40625
+      },
+      {
+        "height": 48,
+        "text": "Hakkımda",
+        "width": 69.1015625
+      },
+      {
+        "height": 48,
+        "text": "İletişim",
+        "width": 52.65625
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 465.6484375,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-dark-1600.webp",
+    "theme": "dark",
+    "width": 390
+  },
+  {
+    "dockTop": 0,
+    "height": 1024,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 763.796875,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-dark-1600.webp",
+    "theme": "dark",
+    "width": 768
+  },
+  {
+    "dockTop": 0,
+    "height": 768,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 635.3828125,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-dark-1600.webp",
+    "theme": "dark",
+    "width": 1024
+  },
+  {
+    "dockTop": 0,
+    "height": 720,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 624.65625,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-dark-1600.webp",
+    "theme": "dark",
+    "width": 1280
+  },
+  {
+    "dockTop": 0,
+    "height": 900,
+    "heroImages": 1,
+    "loaded": true,
+    "navFits": true,
+    "navLinks": [
+      {
+        "height": 0,
+        "text": "Ana sayfa",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Projelerim",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "Hakkımda",
+        "width": 0
+      },
+      {
+        "height": 0,
+        "text": "İletişim",
+        "width": 0
+      }
+    ],
+    "overflow": 0,
+    "profileBottom": 723.4140625,
+    "scrollY": 0,
+    "src": "http://127.0.0.1:4173/media/images/hero-dark-1600.webp",
+    "theme": "dark",
+    "width": 1440
+  }
+]

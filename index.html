@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#f5f7fa" />
+    <meta
+      name="description"
+      content="Yiğit Ata, yazılım ve etkileşimin buluştuğu anlaşılır dijital deneyimler geliştiriyor."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yiğit Ata | Yazılım Geliştirici" />
+    <meta
+      property="og:description"
+      content="Yazılım ve etkileşimin buluştuğu anlaşılır dijital deneyimler."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Yiğit Ata | Yazılım Geliştirici</title>
+    <script>
+      try {
+        const choice = localStorage.getItem("portfolio-theme");
+        document.documentElement.dataset.theme =
+          choice === "light" || choice === "dark"
+            ? choice
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+      } catch {
+        document.documentElement.dataset.theme = matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches
+          ? "dark"
+          : "light";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

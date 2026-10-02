@@ -1,0 +1,71 @@
+:root {
+  color-scheme: light;
+  --bg: oklch(0.974 0.008 252);
+  --bg-elevated: oklch(0.993 0.004 250);
+  --text-primary: oklch(0.195 0.025 257);
+  --text-secondary: oklch(0.43 0.022 255);
+  --text-tertiary: oklch(0.53 0.016 255);
+  --accent: oklch(0.54 0.12 250);
+  --accent-soft: oklch(0.89 0.047 247);
+  --focus: oklch(0.49 0.15 249);
+  --hairline: color-mix(in oklch, var(--text-primary) 14%, transparent);
+  --glass-fill: rgb(255 255 255 / 0.52);
+  --glass-fill-strong: rgb(255 255 255 / 0.76);
+  --glass-border: rgb(255 255 255 / 0.8);
+  --glass-edge: rgb(255 255 255 / 0.8);
+  --glass-shadow:
+    0 17px 42px rgb(46 64 91 / 0.12), 0 2px 8px rgb(46 64 91 / 0.04);
+  --ambient-a: oklch(0.86 0.055 237 / 0.48);
+  --ambient-b: oklch(0.9 0.035 275 / 0.34);
+  --ambient-line: oklch(0.68 0.06 239 / 0.24);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --radius-xs: 10px;
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+  --blur-glass: 20px;
+  --container: 1480px;
+  --text-body-lg: clamp(1.125rem, 1.65vw, 1.375rem);
+  --text-h2: clamp(2.8rem, 6.6vw, 6.6rem);
+  --z-base: 0;
+  --z-content: 10;
+  --z-nav: 50;
+  --z-popover: 70;
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 520ms;
+  --ease-out: cubic-bezier(0.22, 1, 0, 1);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: oklch(0.17 0.018 257);
+  --bg-elevated: oklch(0.22 0.022 255);
+  --text-primary: oklch(0.96 0.006 250);
+  --text-secondary: oklch(0.76 0.012 250);
+  --text-tertiary: oklch(0.62 0.015 250);
+  --accent: oklch(0.76 0.1 239);
+  --accent-soft: oklch(0.33 0.07 242);
+  --focus: oklch(0.79 0.13 241);
+  --hairline: rgb(230 239 255 / 0.16);
+  --glass-fill: rgb(37 47 65 / 0.58);
+  --glass-fill-strong: rgb(39 48 64 / 0.78);
+  --glass-border: rgb(255 255 255 / 0.16);
+  --glass-edge: rgb(255 255 255 / 0.26);
+  --glass-shadow: 0 20px 58px rgb(0 0 0 / 0.32), 0 2px 8px rgb(0 0 0 / 0.14);
+  --ambient-a: oklch(0.38 0.07 239 / 0.34);
+  --ambient-b: oklch(0.3 0.06 277 / 0.28);
+  --ambient-line: oklch(0.53 0.06 239 / 0.19);
+}

@@ -1,0 +1,394 @@
+{
+  "/projects/kisisel-kitaplik/01-kitapligim.png": {
+    "width": 1906,
+    "height": 945,
+    "sources": [
+      {
+        "src": "/media/projects/kisisel-kitaplik/01-kitapligim-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/kisisel-kitaplik/01-kitapligim-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/kisisel-kitaplik/01-kitapligim-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/kisisel-kitaplik/01-kitapligim-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/kisisel-kitaplik/01-kitapligim-1906.webp",
+        "width": 1906
+      }
+    ]
+  },
+  "/projects/kisisel-kitaplik/02-yazarlar.png": {
+    "width": 1357,
+    "height": 678,
+    "sources": [
+      {
+        "src": "/media/projects/kisisel-kitaplik/02-yazarlar-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/kisisel-kitaplik/02-yazarlar-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/kisisel-kitaplik/02-yazarlar-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/kisisel-kitaplik/02-yazarlar-1357.webp",
+        "width": 1357
+      }
+    ]
+  },
+  "/projects/techball-web/01-oyuncular.png": {
+    "width": 2878,
+    "height": 1522,
+    "sources": [
+      {
+        "src": "/media/projects/techball-web/01-oyuncular-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/techball-web/01-oyuncular-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/techball-web/01-oyuncular-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/techball-web/01-oyuncular-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/techball-web/01-oyuncular-2878.webp",
+        "width": 2878
+      }
+    ]
+  },
+  "/projects/techball-web/02-scout-ai.png": {
+    "width": 2850,
+    "height": 1614,
+    "sources": [
+      {
+        "src": "/media/projects/techball-web/02-scout-ai-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/techball-web/02-scout-ai-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/techball-web/02-scout-ai-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/techball-web/02-scout-ai-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/techball-web/02-scout-ai-2850.webp",
+        "width": 2850
+      }
+    ]
+  },
+  "/projects/yata-market/01-katalog.png": {
+    "width": 1011,
+    "height": 947,
+    "sources": [
+      {
+        "src": "/media/projects/yata-market/01-katalog-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yata-market/01-katalog-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yata-market/01-katalog-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yata-market/01-katalog-1011.webp",
+        "width": 1011
+      }
+    ]
+  },
+  "/projects/yata-market/02-sepet.png": {
+    "width": 1126,
+    "height": 592,
+    "sources": [
+      {
+        "src": "/media/projects/yata-market/02-sepet-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yata-market/02-sepet-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yata-market/02-sepet-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yata-market/02-sepet-1126.webp",
+        "width": 1126
+      }
+    ]
+  },
+  "/projects/yataclimate/01-sehirler.png": {
+    "width": 1903,
+    "height": 945,
+    "sources": [
+      {
+        "src": "/media/projects/yataclimate/01-sehirler-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yataclimate/01-sehirler-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yataclimate/01-sehirler-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yataclimate/01-sehirler-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/yataclimate/01-sehirler-1903.webp",
+        "width": 1903
+      }
+    ]
+  },
+  "/projects/yataclimate/02-sehir-detayi.png": {
+    "width": 1904,
+    "height": 944,
+    "sources": [
+      {
+        "src": "/media/projects/yataclimate/02-sehir-detayi-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yataclimate/02-sehir-detayi-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yataclimate/02-sehir-detayi-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yataclimate/02-sehir-detayi-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/yataclimate/02-sehir-detayi-1904.webp",
+        "width": 1904
+      }
+    ]
+  },
+  "/projects/yataoil/01-ilanlar.jpeg": {
+    "width": 1543,
+    "height": 911,
+    "sources": [
+      {
+        "src": "/media/projects/yataoil/01-ilanlar-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yataoil/01-ilanlar-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yataoil/01-ilanlar-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yataoil/01-ilanlar-1543.webp",
+        "width": 1543
+      }
+    ]
+  },
+  "/projects/yataoil/02-maliyet.jpeg": {
+    "width": 1247,
+    "height": 907,
+    "sources": [
+      {
+        "src": "/media/projects/yataoil/02-maliyet-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yataoil/02-maliyet-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yataoil/02-maliyet-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yataoil/02-maliyet-1247.webp",
+        "width": 1247
+      }
+    ]
+  },
+  "/projects/yataquizing/01-quiz-secimi.png": {
+    "width": 1905,
+    "height": 946,
+    "sources": [
+      {
+        "src": "/media/projects/yataquizing/01-quiz-secimi-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yataquizing/01-quiz-secimi-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yataquizing/01-quiz-secimi-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yataquizing/01-quiz-secimi-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/yataquizing/01-quiz-secimi-1905.webp",
+        "width": 1905
+      }
+    ]
+  },
+  "/projects/yataquizing/02-soru.png": {
+    "width": 1919,
+    "height": 944,
+    "sources": [
+      {
+        "src": "/media/projects/yataquizing/02-soru-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yataquizing/02-soru-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yataquizing/02-soru-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yataquizing/02-soru-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/yataquizing/02-soru-1919.webp",
+        "width": 1919
+      }
+    ]
+  },
+  "/projects/yataquizing/03-sonuc.png": {
+    "width": 1905,
+    "height": 944,
+    "sources": [
+      {
+        "src": "/media/projects/yataquizing/03-sonuc-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yataquizing/03-sonuc-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yataquizing/03-sonuc-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yataquizing/03-sonuc-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/projects/yataquizing/03-sonuc-1905.webp",
+        "width": 1905
+      }
+    ]
+  },
+  "/projects/yatatodo/01-gorevler-ve-plan.png": {
+    "width": 1266,
+    "height": 933,
+    "sources": [
+      {
+        "src": "/media/projects/yatatodo/01-gorevler-ve-plan-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/projects/yatatodo/01-gorevler-ve-plan-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/projects/yatatodo/01-gorevler-ve-plan-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/projects/yatatodo/01-gorevler-ve-plan-1266.webp",
+        "width": 1266
+      }
+    ]
+  },
+  "/images/hero-light.jpeg": {
+    "width": 1672,
+    "height": 941,
+    "sources": [
+      {
+        "src": "/media/images/hero-light-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/images/hero-light-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/images/hero-light-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/images/hero-light-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/images/hero-light-1672.webp",
+        "width": 1672
+      }
+    ]
+  },
+  "/images/hero-dark.jpeg": {
+    "width": 1672,
+    "height": 941,
+    "sources": [
+      {
+        "src": "/media/images/hero-dark-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/media/images/hero-dark-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/media/images/hero-dark-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/images/hero-dark-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "/media/images/hero-dark-1672.webp",
+        "width": 1672
+      }
+    ]
+  }
+}
