@@ -4,7 +4,7 @@ React, TypeScript, Vite ve Motion ile kişisel portföy. Mevcut deniz fotoğraf�
 
 ## Çalıştırma
 
-Node.js 22 veya üzeri ve npm gereklidir.
+Node.js 22.22.2 veya üzeri bir 22.x sürümü ve npm gereklidir.
 
 ```bash
 npm install
@@ -16,6 +16,16 @@ npm run lint
 ```
 
 ## Yayın çıktısı
+
+### Vercel ile yayınlama
+
+Vercel'de GitHub deposunu içe aktarın. `vercel.json`, Vite altyapısını, `npm ci` kurulumunu, yayın komutunu ve `dist` çıktı klasörünü otomatik ayarlar. `package.json` üzerinden Node.js 22.x seçilir.
+
+Vercel build'i, `VERCEL_PROJECT_PRODUCTION_URL` sistem değişkeninden kalıcı yayın adresini alıp canonical, paylaşım görselleri ve sitemap için kullanır. System Environment Variables açık olmalıdır. İstenirse `SITE_URL` ile kendi alan adınız belirtilebilir; bu değer önceliklidir. Build sonunda 10 statik sayfa ve sitemap doğrulanır. Eksik yayın adresi veya başarısız doğrulama yayını durdurur.
+
+Her rota kendi HTML dosyasından sunulur. `dist/404.html`, Vercel'in özel 404 sayfasıdır; bilinmeyen adreslere HTTP 404 döner. Yayından sonra ana sayfa, `/about`, proje detayları, CV, bir statik görsel ve bilinmeyen bir adres canlı sunucuda kontrol edilmelidir.
+
+### Diğer statik hosting sağlayıcıları
 
 `npm run build` TypeScript ve istemci derlemesini çalıştırır; aynı React sayfalarını sunucuda ön üretip `dist/index.html`, `dist/about/index.html`, yedi `dist/work/<slug>/index.html` ve `dist/404.html` dosyasını yazar. İçerik, başlık, açıklama ve paylaşım görseli JavaScript çalışmadan da bulunur. İstemci bu içeriği hydrate eder. Proje detayları ve uzun anlatılar ayrı paket olarak yüklenir.
 
