@@ -69,4 +69,4 @@ AJAX gönderimi tekrar gönderimi engeller ve 20 saniyede zaman aşımına uğra
 
 `npm run test` gezinme, form hata/yeniden deneme davranışı, azaltılmış hareket, 404 metaverisi ve gerçek sitemap üretim dalını kapsar. CSS galeri ve dar menü ölçümleri tarayıcıda ayrıca yapılır. Kullanıcının hareket tercihi MotionConfig ve bileşen hook'larıyla uygulanır.
 
-[Uygulama durumu](./audit/2026-10-01/UYGULAMA_DURUMU.md), [ilk inceleme](./audit/2026-10-01/PORTFOLIO_INCELEMESI.md) ve son doğrulama raporu audit klasöründedir. Diğer uygulama depolarına ait öneriler bu portfolio değişikliğinin dışında ayrıca listelenir.
+TypeScript derleme önbellekleri `node_modules/.cache/` altında tutulur. `node_modules`, `dist`, `coverage` ve `*.tsbuildinfo` dosyaları Git'e eklenmez. Görsel üretim scriptleri içerik güncellemeleri için, testler ve build doğrulama scripti ise yayın kontrolleri için korunur.
