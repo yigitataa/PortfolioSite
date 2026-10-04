@@ -1,9 +1,11 @@
+import { useLanguage } from "../../app/useLanguage";
 import { flushSync } from "react-dom";
 import { useTheme } from "../../app/useTheme";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import { withThemeTransition } from "../../lib/themeTransition";
 
 export function ThemeControl({ compact = false }: { compact?: boolean }) {
+  const { t } = useLanguage();
   const { resolvedTheme, setPreference } = useTheme();
   const reduceMotion = useReducedMotion();
   const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
@@ -12,8 +14,14 @@ export function ThemeControl({ compact = false }: { compact?: boolean }) {
     <button
       className={`theme-control${compact ? " theme-control--compact" : ""}`}
       type="button"
-      aria-label={`${nextTheme === "dark" ? "Koyu" : "Açık"} temaya geç`}
-      title={`${nextTheme === "dark" ? "Koyu" : "Açık"} temaya geç`}
+      aria-label={t(
+        `${nextTheme === "dark" ? "Koyu" : "Açık"} temaya geç`,
+        `Switch to ${nextTheme} theme`,
+      )}
+      title={t(
+        `${nextTheme === "dark" ? "Koyu" : "Açık"} temaya geç`,
+        `Switch to ${nextTheme} theme`,
+      )}
       onClick={() =>
         withThemeTransition(
           () => flushSync(() => setPreference(nextTheme)),
@@ -25,7 +33,7 @@ export function ThemeControl({ compact = false }: { compact?: boolean }) {
         {resolvedTheme === "dark" ? "☀" : "☾"}
       </span>
       <span className="theme-control__label" aria-hidden="true">
-        <span>Tema</span>
+        <span>{t("Tema", "Theme")}</span>
       </span>
     </button>
   );

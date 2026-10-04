@@ -1,3 +1,4 @@
+import { useLanguage } from "../app/useLanguage";
 import { useState } from "react";
 import type { Project } from "../types/project";
 import { imageAttributes } from "../lib/images";
@@ -11,6 +12,7 @@ export function ProjectMedia({
   media?: Project["cover"];
   hero?: boolean;
 }) {
+  const { t } = useLanguage();
   const [failed, setFailed] = useState(false);
   const cover = media ?? project.cover;
   if (!cover.src || failed || cover.type === "interactive")
@@ -18,10 +20,13 @@ export function ProjectMedia({
       <div
         className="project-media project-media--fallback"
         role="img"
-        aria-label={`${project.title} için ekran görüntüsü henüz eklenmedi`}
+        aria-label={t(
+          `${project.title} için ekran görüntüsü henüz eklenmedi`,
+          `No screenshot has been added for ${project.title} yet`,
+        )}
       >
         <span>{project.shortTitle ?? project.title}</span>
-        <small>Ekran görüntüsü yakında</small>
+        <small>{t("Ekran görüntüsü yakında", "Screenshot coming soon")}</small>
       </div>
     );
   if (cover.type === "video")

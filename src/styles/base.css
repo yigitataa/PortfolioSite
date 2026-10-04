@@ -124,7 +124,8 @@ em {
   width: min(
     calc(100% - 48px),
     calc(
-      var(--nav-links-width, 400px) + 2rem + 48px + 2 * var(--nav-gap) + 35px
+      var(--nav-links-width, 400px) + 2rem + 48px + 2 * var(--nav-gap) + 35px +
+        90px
     )
   );
 }
@@ -231,6 +232,50 @@ em {
 }
 .mobile-dock {
   display: none;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.language-control {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in oklch, var(--text-primary) 5%, transparent);
+  flex-shrink: 0;
+}
+.language-control button {
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0 8px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+.language-control button:hover {
+  color: var(--text-primary);
+  background: color-mix(in oklch, var(--accent) 9%, transparent);
+}
+.language-control button[aria-pressed="true"] {
+  color: var(--text-primary);
+  background: color-mix(in oklch, var(--accent) 13%, transparent);
+}
+.language-control button:active {
+  transform: scale(0.96);
+}
+.language-control button:focus-visible {
+  outline-offset: -3px;
 }
 
 .theme-control {
@@ -1102,6 +1147,11 @@ em {
   .floating-nav__brand {
     min-width: 8rem;
   }
+  .floating-nav .theme-control__label {
+    grid-template-columns: 0fr;
+    margin-left: 0;
+    opacity: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1160,12 +1210,19 @@ em {
     white-space: nowrap;
   }
   .mobile-theme.glass {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px;
     position: fixed;
     width: max-content;
     z-index: var(--z-nav);
     top: calc(12px + env(safe-area-inset-top));
     right: 12px;
+  }
+  .mobile-theme .language-control button {
+    min-height: 44px;
+    min-width: 40px;
   }
   .mobile-theme .theme-control {
     min-width: 48px;

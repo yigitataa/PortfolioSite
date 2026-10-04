@@ -1,3 +1,4 @@
+import { useLanguage } from "../app/useLanguage";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Section } from "../components/layout/Section";
 import { GlassButton } from "../components/glass/GlassButton";
@@ -12,13 +13,13 @@ const emptyRequest: ContactRequest = {
 };
 
 export function Contact() {
+  const { t } = useLanguage();
   const [copied, setCopied] = useState(false);
   const [request, setRequest] = useState(emptyRequest);
   const [status, setStatus] = useState<
     "idle" | "sending" | "success" | "error"
   >("idle");
-  const [error, setError] = useState("");
-  const [messageError, setMessageError] = useState("");
+  const [messageError, setMessageError] = useState(false);
   const [reference, setReference] = useState("");
   const activeSubmission = useRef<AbortController | null>(null);
   const feedbackRef = useRef<HTMLDivElement>(null);
@@ -58,14 +59,14 @@ export function Contact() {
     // A changed message is a new request; unchanged retries keep their reference.
     setReference("");
     if (status === "error") setStatus("idle");
-    if (field === "message") setMessageError("");
+    if (field === "message") setMessageError(false);
   }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (activeSubmission.current) return;
     if (request.message.trim().length < 10) {
-      setMessageError("En az 10 karakterlik bir mesaj yazabilir misin?");
+      setMessageError(true);
       messageRef.current?.focus();
       return;
     }
@@ -93,9 +94,6 @@ export function Contact() {
     } catch {
       // Route changes abort the request and must not update an unmounted form.
       if (activeSubmission.current === controller) {
-        setError(
-          "Gönderimi doğrulayamadım. Mesajın burada duruyor; tekrar deneyebilirsin.",
-        );
         setStatus("error");
       }
     } finally {
@@ -109,18 +107,20 @@ export function Contact() {
     <Section id="contact" className="contact-section" environment="cool">
       <div className="contact-section__grid">
         <Reveal className="contact-section__intro">
-          <span className="section-index">İletişim</span>
-          <h2 aria-label="Bana Ulaşabilirsin">
-            Bana
+          <span className="section-index">{t("İletişim", "Contact")}</span>
+          <h2 aria-label={t("Bana Ulaşabilirsin", "Get in touch")}>
+            {t("Bana", "Get in")}
             <br />
-            <em>Ulaşabilirsin</em>
+            <em>{t("Ulaşabilirsin", "touch")}</em>
           </h2>
           <div className="contact-section__details">
             <div>
-              <span>E-posta</span>
+              <span>{t("E-posta", "Email")}</span>
               <a href={`mailto:${site.email}`}>{site.email}</a>
               <GlassButton type="button" onClick={copyEmail} aria-live="polite">
-                {copied ? "Kopyalandı ✓" : "E-postayı kopyala"}
+                {copied
+                  ? t("Kopyalandı ✓", "Copied ✓")
+                  : t("E-postayı kopyala", "Copy email")}
               </GlassButton>
             </div>
           </div>
@@ -137,7 +137,7 @@ export function Contact() {
             )}
             {site.cv && (
               <a href={site.cv} download>
-                CV’yi indir ↓
+                {t("CV’yi indir ↓", "Download CV ↓")}
               </a>
             )}
           </div>
@@ -154,13 +154,21 @@ export function Contact() {
               <span className="contact-ticket__check" aria-hidden="true">
                 ✓
               </span>
-              <h3>Mesajın gönderim servisine ulaştı.</h3>
+              <h3>
+                {t(
+                  "Mesajın gönderim servisine ulaştı.",
+                  "Your message reached the submission service.",
+                )}
+              </h3>
               <p>
-                Gönderim servisi mesajını kabul etti. Yanıt için bıraktığın
-                e-posta adresini kullanacağım.
+                {t(
+                  "Gönderim servisi mesajını kabul etti. Yanıt için bıraktığın e-posta adresini kullanacağım.",
+                  "The submission service accepted your message. I will reply using the email address you provided.",
+                )}
               </p>
               <p className="contact-ticket__reference">
-                Gönderim referansı: <strong>{reference}</strong>
+                {t("Gönderim referansı:", "Submission reference:")}{" "}
+                <strong>{reference}</strong>
               </p>
               <GlassButton
                 type="button"
@@ -171,7 +179,7 @@ export function Contact() {
                   window.requestAnimationFrame(() => emailRef.current?.focus());
                 }}
               >
-                Yeni bir mesaj yaz
+                {t("Yeni bir mesaj yaz", "Write another message")}
               </GlassButton>
             </div>
           ) : (
@@ -182,17 +190,24 @@ export function Contact() {
               aria-busy={status === "sending"}
               onSubmit={submit}
             >
-              <h3 id="contact-ticket-title">Mesaj bırak.</h3>
+              <h3 id="contact-ticket-title">
+                {t("Mesaj bırak.", "Leave a message.")}
+              </h3>
               <p className="contact-ticket__description">
-                Birkaç satır yeterli. Mesajın e-postama iletilir; sana e-posta
-                ile yanıt veririm.
+                {t(
+                  "Birkaç satır yeterli. Mesajın e-postama iletilir; sana e-posta ile yanıt veririm.",
+                  "A few lines are enough. Your message is forwarded to my inbox, and I will reply by email.",
+                )}
               </p>
               <fieldset disabled={status === "sending"}>
                 <legend className="visually-hidden">
-                  İletişim bilgilerin ve mesajın
+                  {t(
+                    "İletişim bilgilerin ve mesajın",
+                    "Your contact details and message",
+                  )}
                 </legend>
                 <label htmlFor="contact-email">
-                  E-posta adresin
+                  {t("E-posta adresin", "Your email address")}
                   <input
                     ref={emailRef}
                     id="contact-email"
@@ -201,7 +216,7 @@ export function Contact() {
                     autoComplete="email"
                     required
                     maxLength={254}
-                    placeholder="sana@ornek.com"
+                    placeholder={t("sana@ornek.com", "you@example.com")}
                     value={request.email}
                     onChange={(event) =>
                       updateRequest("email", event.target.value)
@@ -209,7 +224,7 @@ export function Contact() {
                   />
                 </label>
                 <label htmlFor="contact-message">
-                  Mesajın
+                  {t("Mesajın", "Your message")}
                   <textarea
                     ref={messageRef}
                     id="contact-message"
@@ -218,7 +233,10 @@ export function Contact() {
                     minLength={10}
                     maxLength={3000}
                     rows={5}
-                    placeholder="Aklındaki fikri veya ihtiyacını kısaca anlat…"
+                    placeholder={t(
+                      "Aklındaki fikri veya ihtiyacını kısaca anlat…",
+                      "Briefly describe your idea or what you need…",
+                    )}
                     aria-invalid={messageError ? true : undefined}
                     aria-describedby={
                       messageError ? "contact-message-error" : undefined
@@ -235,12 +253,15 @@ export function Contact() {
                     className="contact-ticket__feedback"
                     role="alert"
                   >
-                    {messageError}
+                    {t(
+                      "En az 10 karakterlik bir mesaj yazabilir misin?",
+                      "Please write a message with at least 10 characters.",
+                    )}
                   </span>
                 )}
                 <div className="contact-ticket__honeypot" aria-hidden="true">
                   <label htmlFor="contact-website">
-                    Bu alanı boş bırak
+                    {t("Bu alanı boş bırak", "Leave this field empty")}
                     <input
                       id="contact-website"
                       name="_honey"
@@ -255,17 +276,24 @@ export function Contact() {
                   size="lg"
                   className="contact-ticket__submit"
                 >
-                  {status === "sending" ? "Gönderiliyor…" : "Mesajı gönder"}
+                  {status === "sending"
+                    ? t("Gönderiliyor…", "Sending…")
+                    : t("Mesajı gönder", "Send message")}
                   {status !== "sending" && <span aria-hidden="true"> ↗</span>}
                 </GlassButton>
               </fieldset>
               <p className="contact-ticket__privacy">
-                E-posta adresin ve mesajın FormSubmit aracılığıyla bana
-                iletilir. E-posta adresini sana dönmek için kullanırım.
+                {t(
+                  "E-posta adresin ve mesajın FormSubmit aracılığıyla bana iletilir. E-posta adresini sana dönmek için kullanırım.",
+                  "Your email address and message are forwarded to me through FormSubmit. I use your email address to reply to you.",
+                )}
               </p>
               {status === "sending" && (
                 <p role="status" className="contact-ticket__feedback">
-                  Mesajın iletiliyor, lütfen bekle.
+                  {t(
+                    "Mesajın iletiliyor, lütfen bekle.",
+                    "Your message is being sent. Please wait.",
+                  )}
                 </p>
               )}
               {status === "error" && (
@@ -275,7 +303,12 @@ export function Contact() {
                   tabIndex={-1}
                   className="contact-ticket__feedback"
                 >
-                  <p>{error}</p>
+                  <p>
+                    {t(
+                      "Gönderimi doğrulayamadım. Mesajın burada duruyor; tekrar deneyebilirsin.",
+                      "I could not confirm the submission. Your message is still here; you can try again.",
+                    )}
+                  </p>
                 </div>
               )}
             </form>

@@ -46,6 +46,14 @@ Yerel preview, temiz rota adreslerini ilgili HTML dosyasından sunar ve bilinmey
 
 ## İçerik ve görseller
 
+### Dil seçimi
+
+Masaüstü gezinme çubuğunda ve mobil üst kontrolde TR / EN seçimi bulunur. İlk ziyaret Türkçe açılır; seçim `portfolio-language` anahtarıyla tarayıcıda saklanır ve sayfa yenilendiğinde geri yüklenir. Tarayıcı kaydı engelliyse geçerli ziyaret boyunca dil değişimi çalışır. Dil değişimi mevcut sayfayı, galeri seçimini ve yazılmış iletişim mesajını korur.
+
+`LanguageProvider`, HTML `lang` değerini; `Seo` ise başlık, açıklama, paylaşım metinleri ve OG dilini günceller. Ön üretilen HTML Türkçedir; kayıtlı İngilizce tercihi hydration sonrasında uygulanır. Rota adresleri iki dilde de aynıdır. CV PDF'si, proje ekranları ve görsellere gömülü metinler özgün dosyalar olarak kalır.
+
+Arayüz metinleri `useLanguage().t(türkçe, ingilizce)` ile seçilir. İngilizce proje metinleri `projectEntries.en.json`, `projectCaseStudies.en.ts` ve `projectNarratives.en.ts` dosyalarındadır. Proje içeriği eklenirken veya değiştirilirken iki dil birlikte güncellenmelidir.
+
 - `src/data/site.ts`: metinler, GitHub, LinkedIn, CV ve iletişim.
 - `src/data/projectEntries.json`: proje kaydı, sıra, durum, teknoloji, ekran ve bağlantıların tek kaynağı. Sitemap de bu dosyayı kullanır.
 - `src/data/projectCaseStudies.ts`: problem, çözüm, teknik karar, mevcut sınırlar ve kanıt kapsamı.
@@ -77,6 +85,6 @@ AJAX gönderimi tekrar gönderimi engeller ve 20 saniyede zaman aşımına uğra
 
 ## Kontroller ve kapsam
 
-`npm run test` gezinme, form hata/yeniden deneme davranışı, azaltılmış hareket, 404 metaverisi ve gerçek sitemap üretim dalını kapsar. CSS galeri ve dar menü ölçümleri tarayıcıda ayrıca yapılır. Kullanıcının hareket tercihi MotionConfig ve bileşen hook'larıyla uygulanır.
+`npm run test` gezinme, form hata/yeniden deneme davranışı, azaltılmış hareket, 404 metaverisi ve gerçek sitemap üretim dalını kapsar. Dil testleri TR / EN geçişini, tercihin geri yüklenmesini, yedi projenin tam çevirisini, form durumlarının dil değişiminde korunmasını ve engellenen tarayıcı kaydını denetler. CSS galeri ve dar menü ölçümleri tarayıcıda ayrıca yapılır. Kullanıcının hareket tercihi MotionConfig ve bileşen hook'larıyla uygulanır.
 
 TypeScript derleme önbellekleri `node_modules/.cache/` altında tutulur. `node_modules`, `dist`, `coverage` ve `*.tsbuildinfo` dosyaları Git'e eklenmez. Görsel üretim scriptleri içerik güncellemeleri için, testler ve build doğrulama scripti ise yayın kontrolleri için korunur.

@@ -1,6 +1,8 @@
+import { useLanguage } from "../app/useLanguage";
 import { Link } from "react-router";
 import { Container } from "../components/layout/Container";
 import { ProjectGallery } from "./ProjectGallery";
+import { englishProjectStatusLabels } from "../data/projectStatus";
 import { projectStatusLabels } from "../data/projectStatus";
 import type { Project } from "../types/project";
 
@@ -11,6 +13,7 @@ export function ProjectDetail({
   project: Project;
   nextProject?: Project;
 }) {
+  const { t } = useLanguage();
   const narrative = project.narrative;
   const study = project.caseStudy;
   return (
@@ -18,11 +21,16 @@ export function ProjectDetail({
       <Container>
         <div className="project-detail__topline">
           <Link to="/#work" className="text-link">
-            ← Tüm projeler
+            {t("← Tüm projeler", "← All projects")}
           </Link>
           <span className="section-index">
             {project.year} /{" "}
-            {project.status ? projectStatusLabels[project.status] : "Proje"}
+            {project.status
+              ? t(
+                  projectStatusLabels[project.status],
+                  englishProjectStatusLabels[project.status],
+                )
+              : t("Proje", "Project")}
           </span>
         </div>
         <div className="project-detail__overview">
@@ -39,7 +47,7 @@ export function ProjectDetail({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Canlı projeyi aç ↗
+                  {t("Canlı projeyi aç ↗", "Open live project ↗")}
                 </a>
               )}
               {project.links?.github && (
@@ -49,24 +57,27 @@ export function ProjectDetail({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Kaynak kodu gör ↗
+                  {t("Kaynak kodu gör ↗", "View source code ↗")}
                 </a>
               )}
               {!project.links?.live && (
                 <span className="project-detail__availability">
-                  Canlı demo henüz paylaşılmadı.
+                  {t(
+                    "Canlı demo henüz paylaşılmadı.",
+                    "A live demo has not been shared yet.",
+                  )}
                 </span>
               )}
             </div>
             <dl className="project-detail__facts">
               {project.role && (
                 <div>
-                  <dt>Rol</dt>
+                  <dt>{t("Rol", "Role")}</dt>
                   <dd>{project.role}</dd>
                 </div>
               )}
               <div>
-                <dt>Teknolojiler</dt>
+                <dt>{t("Teknolojiler", "Technologies")}</dt>
                 <dd>{project.stack.join(" · ")}</dd>
               </div>
             </dl>
@@ -77,10 +88,25 @@ export function ProjectDetail({
               {study &&
                 [
                   ["problem", "Problem", study.problem],
-                  ["solution", "Çözüm", study.solution],
-                  ["decision", "Teknik karar", study.decision],
-                  ["limits", "Mevcut sınırlar", study.limits],
-                  ["evidence", "Ekranlar ve doğrulama kapsamı", study.evidence],
+                  ["solution", t("Çözüm", "Solution"), study.solution],
+                  [
+                    "decision",
+                    t("Teknik karar", "Technical decision"),
+                    study.decision,
+                  ],
+                  [
+                    "limits",
+                    t("Mevcut sınırlar", "Current limitations"),
+                    study.limits,
+                  ],
+                  [
+                    "evidence",
+                    t(
+                      "Ekranlar ve doğrulama kapsamı",
+                      "Screenshots and verification scope",
+                    ),
+                    study.evidence,
+                  ],
                 ].map(([id, title, text]) => (
                   <section key={id} aria-labelledby={`project-${id}`}>
                     <h2 id={`project-${id}`}>{title}</h2>
@@ -90,14 +116,21 @@ export function ProjectDetail({
               {narrative && (
                 <>
                   <details className="project-detail__full-story">
-                    <summary>Projenin hikâyesi ve uygulama ayrıntıları</summary>
+                    <summary>
+                      {t(
+                        "Projenin hikâyesi ve uygulama ayrıntıları",
+                        "Project story and implementation details",
+                      )}
+                    </summary>
                     {narrative.paragraphs.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </details>
                   {narrative.dataAndPrivacy && (
                     <aside aria-labelledby="project-privacy-heading">
-                      <h2 id="project-privacy-heading">Veri ve gizlilik</h2>
+                      <h2 id="project-privacy-heading">
+                        {t("Veri ve gizlilik", "Data and privacy")}
+                      </h2>
                       {narrative.dataAndPrivacy.map((paragraph) => (
                         <p key={paragraph}>{paragraph}</p>
                       ))}
@@ -111,10 +144,12 @@ export function ProjectDetail({
         <div className="project-detail__outro">
           {nextProject && (
             <Link to={`/work/${nextProject.slug}`}>
-              Sonraki proje: {nextProject.title} →
+              {t("Sonraki proje:", "Next project:")} {nextProject.title} →
             </Link>
           )}
-          <Link to="/#work">Tüm projelere dön →</Link>
+          <Link to="/#work">
+            {t("Tüm projelere dön →", "Back to all projects →")}
+          </Link>
         </div>
       </Container>
     </article>

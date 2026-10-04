@@ -1,3 +1,4 @@
+import { useLanguage } from "../../app/useLanguage";
 import { motion } from "motion/react";
 import { useLocation } from "react-router";
 import { useActiveSection } from "../../hooks/useActiveSection";
@@ -5,11 +6,13 @@ import { navigation } from "../../data/navigation";
 import { projects } from "../../data/projects";
 import { spring } from "../../lib/motion";
 import { GlassDock } from "../glass/GlassDock";
+import { LanguageControl } from "./LanguageControl";
 import { ThemeControl } from "./ThemeControl";
 import { TransitionLink } from "./TransitionLink";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 export function MobileDock() {
+  const { t } = useLanguage();
   const location = useLocation();
   const reduce = useReducedMotion();
   const activeHash = useActiveSection();
@@ -19,7 +22,7 @@ export function MobileDock() {
   return (
     <>
       <div className="mobile-dock">
-        <GlassDock label="Mobil gezinme">
+        <GlassDock label={t("Mobil gezinme", "Mobile navigation")}>
           {items.map((item) => {
             const active =
               item.href === "/"
@@ -45,13 +48,22 @@ export function MobileDock() {
                     transition={reduce ? { duration: 0 } : spring.responsive}
                   />
                 )}
-                {item.label}
+                {t(
+                  item.label,
+                  {
+                    "/": "Home",
+                    "/#work": "Projects",
+                    "/about": "About",
+                    "/#contact": "Contact",
+                  }[item.href] ?? item.label,
+                )}
               </TransitionLink>
             );
           })}
         </GlassDock>
       </div>
       <div className="mobile-theme glass glass--strong glass--pill">
+        <LanguageControl />
         <ThemeControl compact />
       </div>
     </>

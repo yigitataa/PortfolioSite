@@ -1,9 +1,12 @@
+import { useLanguage } from "../app/useLanguage";
 import { TransitionLink } from "../components/layout/TransitionLink";
 import { ProjectMedia } from "./ProjectMedia";
 import type { Project } from "../types/project";
+import { englishProjectStatusLabels } from "../data/projectStatus";
 import { projectStatusLabels } from "../data/projectStatus";
 
 export function ProjectCard({ project }: { project: Project }) {
+  const { t } = useLanguage();
   return (
     <article
       className={`project-card project-card--${project.layout ?? "standard"}`}
@@ -11,7 +14,10 @@ export function ProjectCard({ project }: { project: Project }) {
       <TransitionLink
         to={`/work/${project.slug}`}
         className="project-card__link"
-        aria-label={`${project.title} projesini incele`}
+        aria-label={t(
+          `${project.title} projesini incele`,
+          `Explore ${project.title}`,
+        )}
       >
         <div
           className="project-card__media"
@@ -22,7 +28,7 @@ export function ProjectCard({ project }: { project: Project }) {
             className="project-card__action glass glass--pill"
             aria-hidden="true"
           >
-            Projeyi incele →
+            {t("Projeyi incele →", "Explore project →")}
           </span>
         </div>
         <div className="project-card__meta">
@@ -31,7 +37,10 @@ export function ProjectCard({ project }: { project: Project }) {
             <p>{project.subtitle}</p>
             {project.status && (
               <small className="project-card__status">
-                {projectStatusLabels[project.status]}
+                {t(
+                  projectStatusLabels[project.status],
+                  englishProjectStatusLabels[project.status],
+                )}
               </small>
             )}
           </div>

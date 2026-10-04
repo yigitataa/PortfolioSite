@@ -1,3 +1,4 @@
+import { useLanguage } from "../app/useLanguage";
 import { useState } from "react";
 import type { Project } from "../types/project";
 import { ProjectMedia } from "./ProjectMedia";
@@ -6,6 +7,7 @@ import { imageAttributes } from "../lib/images";
 type GalleryMedia = { type: "image" | "video"; src: string; alt: string };
 
 export function ProjectGallery({ project }: { project: Project }) {
+  const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(0);
   const cover: GalleryMedia | undefined =
     project.cover.src && project.cover.type !== "interactive"
@@ -35,10 +37,10 @@ export function ProjectGallery({ project }: { project: Project }) {
         {active && (
           <figcaption className="project-detail__media-caption">
             <span>
-              Görsel {activeIndex + 1} / {media.length}
+              {t("Görsel", "Image")} {activeIndex + 1} / {media.length}
             </span>
             <a href={active.src} target="_blank" rel="noopener noreferrer">
-              Görseli büyüt ↗
+              {t("Görseli büyüt ↗", "Enlarge image ↗")}
             </a>
           </figcaption>
         )}
@@ -47,14 +49,20 @@ export function ProjectGallery({ project }: { project: Project }) {
         <div
           className="project-detail__media-choices"
           role="group"
-          aria-label={`${project.title} ekran görüntüleri`}
+          aria-label={t(
+            `${project.title} ekran görüntüleri`,
+            `${project.title} screenshots`,
+          )}
         >
           {media.map((item, index) => (
             <button
               key={item.src}
               type="button"
               className="project-detail__media-choice"
-              aria-label={`Görsel ${index + 1}: ${item.alt}`}
+              aria-label={t(
+                `Görsel ${index + 1}: ${item.alt}`,
+                `Image ${index + 1}: ${item.alt}`,
+              )}
               aria-pressed={index === activeIndex}
               onClick={() => setActiveIndex(index)}
             >

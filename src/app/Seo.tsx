@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { site } from "../data/site";
 import { routeMetadata } from "./routeMetadata";
+import { useLanguage } from "./useLanguage";
 
 function upsertMeta(
   attribute: "name" | "property",
@@ -27,8 +28,9 @@ export function Seo({
   description: string;
 }) {
   const location = useLocation();
+  const { language } = useLanguage();
   useEffect(() => {
-    const metadata = routeMetadata(location.pathname);
+    const metadata = routeMetadata(location.pathname, language);
     const url = new URL(
       location.pathname.replace(/\/+$/, "") || "/",
       site.canonicalUrl || window.location.origin,
@@ -36,6 +38,7 @@ export function Seo({
     document.title = title;
     upsertMeta("name", "description", description);
     upsertMeta("property", "og:title", title);
+    upsertMeta("property", "og:locale", language === "en" ? "en_US" : "tr_TR");
     upsertMeta("property", "og:description", description);
     upsertMeta("property", "og:url", url);
     upsertMeta("name", "twitter:title", title);
@@ -65,6 +68,6 @@ export function Seo({
       document.head.appendChild(canonical);
     }
     canonical.href = url;
-  }, [title, description, location.pathname]);
+  }, [title, description, location.pathname, language]);
   return null;
 }

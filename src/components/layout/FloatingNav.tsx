@@ -1,3 +1,4 @@
+import { useLanguage } from "../../app/useLanguage";
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { motion } from "motion/react";
@@ -9,11 +10,13 @@ import { site } from "../../data/site";
 import { spring } from "../../lib/motion";
 import { GlassSurface } from "../glass/GlassSurface";
 import { ScrollProgress } from "../motion/ScrollProgress";
+import { LanguageControl } from "./LanguageControl";
 import { ThemeControl } from "./ThemeControl";
 import { TransitionLink } from "./TransitionLink";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 export function FloatingNav() {
+  const { t } = useLanguage();
   const location = useLocation();
   const reduce = useReducedMotion();
   const [compact, setCompact] = useState(location.pathname !== "/");
@@ -68,11 +71,11 @@ export function FloatingNav() {
         interactive
         className="floating-nav__surface"
       >
-        <nav aria-label="Ana gezinme">
+        <nav aria-label={t("Ana gezinme", "Main navigation")}>
           <TransitionLink
             to="/"
             className="floating-nav__brand"
-            aria-label={`${site.name}, ana sayfa`}
+            aria-label={t(`${site.name}, ana sayfa`, `${site.name}, home`)}
           >
             <span className="floating-nav__brand-full" aria-hidden="true">
               {site.name}
@@ -107,12 +110,23 @@ export function FloatingNav() {
                       transition={reduce ? { duration: 0 } : spring.responsive}
                     />
                   )}
-                  {item.label}
+                  {t(
+                    item.label,
+                    {
+                      "/": "Home",
+                      "/#work": "Projects",
+                      "/about": "About",
+                      "/#contact": "Contact",
+                    }[item.href] ?? item.label,
+                  )}
                 </TransitionLink>
               );
             })}
           </div>
-          <ThemeControl compact={compact} />
+          <div className="nav-controls">
+            <LanguageControl />
+            <ThemeControl compact={compact} />
+          </div>
         </nav>
         <ScrollProgress />
       </GlassSurface>

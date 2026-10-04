@@ -1,0 +1,213 @@
+[
+  {
+    "id": "techball-web",
+    "slug": "techball-web",
+    "title": "TECHball web",
+    "subtitle": "A local analysis interface for Football Manager data",
+    "description": "A local web application for searching and filtering Football Manager player data, evaluating players on a tactics board, and exploring them with Scout AI.",
+    "detailDescription": "TECHball is a local player scouting prototype that brings candidate discovery, comparison, and squad building into one workspace. It makes searches using filters or natural-language questions easier to explore through data-based results.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Vite", "Python", "SQLite"],
+    "tags": ["Data interface", "Football", "Artificial intelligence"],
+    "layout": "wide",
+    "narrativeKey": "techball",
+    "cover": {
+      "type": "image",
+      "src": "/projects/techball-web/01-oyuncular.png",
+      "alt": "TECHball player list, filters, and tactics board"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/techball-web/02-scout-ai.png",
+        "alt": "TECHball Scout AI response and player query results"
+      }
+    ],
+    "featured": true,
+    "order": 0,
+    "status": "prototype"
+  },
+  {
+    "id": "yatatodo",
+    "slug": "yatatodo",
+    "title": "yatatodo",
+    "subtitle": "A personal task list with daily planning",
+    "description": "A React application combining task creation, editing, filtering, and prioritization with a Gemini Flash-powered daily planning flow.",
+    "detailDescription": "Yatatodo is a personal task application that goes beyond recording to-dos to help you decide how to allocate the day’s limited time. Gemini Flash planning suggests an order and duration while leaving the final decision to the user.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Vite", "Gemini Flash"],
+    "tags": ["Productivity", "Planning"],
+    "layout": "standard",
+    "narrativeKey": "yatatodo",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yatatodo/01-gorevler-ve-plan.png",
+      "alt": "yatatodo task list, priorities, and generated daily plan"
+    },
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/01"
+    },
+    "featured": true,
+    "order": 1,
+    "status": "demo"
+  },
+  {
+    "id": "yataquizing",
+    "slug": "yataquizing",
+    "title": "YataQuizing",
+    "subtitle": "A timed quiz experience powered by JSON files",
+    "description": "A web application that starts quizzes from user-uploaded JSON questions, with a timer, progress, answer tracking, and explained results.",
+    "year": 2026,
+    "stack": ["React", "Vite", "CSS", "JSON"],
+    "tags": ["Education", "Quiz"],
+    "layout": "standard",
+    "narrativeKey": "yataquizing",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yataquizing/01-quiz-secimi.png",
+      "alt": "YataQuizing quiz selection and JSON file upload screen"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yataquizing/02-soru.png",
+        "alt": "YataQuizing timed question screen and answer choices"
+      },
+      {
+        "type": "image",
+        "src": "/projects/yataquizing/03-sonuc.png",
+        "alt": "YataQuizing quiz results, score, and answer summary"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/02"
+    },
+    "featured": true,
+    "order": 2,
+    "status": "demo"
+  },
+  {
+    "id": "yataclimate",
+    "slug": "yataclimate",
+    "title": "YataClimate",
+    "subtitle": "Live weather and a seven-day forecast",
+    "description": "A weather application combining city search, current conditions, an hourly view, and a seven-day forecast.",
+    "detailDescription": "YataClimate brings current weather and forecasts for different cities together in readable cards and city detail views. It combines temperature with hourly changes, precipitation, wind, and a weekly outlook to make daily planning easier.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Vinext", "Open-Meteo"],
+    "tags": ["Weather", "Data"],
+    "layout": "standard",
+    "narrativeKey": "yataclimate",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yataclimate/01-sehirler.png",
+      "alt": "YataClimate city cards and current weather summaries"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yataclimate/02-sehir-detayi.png",
+        "alt": "YataClimate weather and hourly forecast for Bursa"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/03"
+    },
+    "featured": true,
+    "order": 3,
+    "status": "demo"
+  },
+  {
+    "id": "yata-market",
+    "slug": "yata-market",
+    "title": "Yata Market",
+    "subtitle": "An e-commerce demo with a product catalog and cart",
+    "description": "A full-stack application combining product search, category and price filters, favorites, a persistent cart, and demo product management with an Express API.",
+    "detailDescription": "Yata Market is an e-commerce demo covering the basic shopping journey from product discovery to the cart. The catalog, product details, favorites, cart, and demo product management share a React interface and Express API.",
+    "year": 2026,
+    "stack": ["React", "Vite", "Express", "JavaScript"],
+    "tags": ["E-commerce", "Full stack"],
+    "layout": "standard",
+    "narrativeKey": "yataMarket",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yata-market/01-katalog.png",
+      "alt": "Yata Market product catalog, search, and filter controls"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yata-market/02-sepet.png",
+        "alt": "Yata Market cart, product quantities, and order summary"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/04-05"
+    },
+    "featured": true,
+    "order": 4,
+    "status": "demo"
+  },
+  {
+    "id": "kisisel-kitaplik",
+    "slug": "kisisel-kitaplik",
+    "title": "Personal Library",
+    "subtitle": "Books, authors, and a reading journal backend",
+    "description": "A local learning application with a React interface for managing authors and books, and an Express API for book-related notes and quotations.",
+    "detailDescription": "Personal Library is a local learning application for organizing author and book records. It separates the responsibilities of two data models: relational catalog data in PostgreSQL and the API backend for book-related notes and quotations in MongoDB.",
+    "year": 2026,
+    "stack": ["React", "Vite", "Express", "PostgreSQL", "MongoDB"],
+    "tags": ["Library", "Database"],
+    "layout": "standard",
+    "narrativeKey": "kisiselKitaplik",
+    "cover": {
+      "type": "image",
+      "src": "/projects/kisisel-kitaplik/01-kitapligim.png",
+      "alt": "Personal Library book list, search, and reading status filter"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/kisisel-kitaplik/02-yazarlar.png",
+        "alt": "Personal Library author list and author editing form"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/DB-Task-1"
+    },
+    "featured": true,
+    "order": 5,
+    "status": "educational"
+  },
+  {
+    "id": "yataoil",
+    "slug": "yataoil",
+    "title": "YataOil",
+    "subtitle": "A vehicle listing and fuel cost research flow",
+    "description": "A research prototype combining brand and listing searches with vehicle details and a fuel cost screen.",
+    "detailDescription": "YataOil aims to evaluate used-car listings and running costs in one flow. Listing and fuel cost screens are available; the scope of live external service integrations still needs verification.",
+    "year": 2026,
+    "stack": ["React", "TypeScript", "Express", "Puppeteer", "Zod"],
+    "tags": ["Automotive", "Data integration"],
+    "layout": "standard",
+    "narrativeKey": "yataoil",
+    "cover": {
+      "type": "image",
+      "src": "/projects/yataoil/01-ilanlar.jpeg",
+      "alt": "YataOil Audi vehicle listings"
+    },
+    "gallery": [
+      {
+        "type": "image",
+        "src": "/projects/yataoil/02-maliyet.jpeg",
+        "alt": "YataOil vehicle details and fuel cost calculation"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/yigitataa/YapaytechTasks/tree/main/Task-%C4%B0lan-Yak%C4%B1t-Hesaplay%C4%B1c%C4%B1-App"
+    },
+    "featured": true,
+    "order": 6,
+    "status": "prototype"
+  }
+]

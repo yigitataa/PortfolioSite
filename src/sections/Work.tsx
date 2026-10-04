@@ -1,10 +1,13 @@
+import { useLanguage } from "../app/useLanguage";
 import { Section } from "../components/layout/Section";
 import { ProjectGrid } from "../projects/ProjectGrid";
 import { ProjectEmptyState } from "../projects/ProjectEmptyState";
-import { projects } from "../data/projects";
+import { projectsForLanguage } from "../data/projects";
 import { site } from "../data/site";
 
 export function Work() {
+  const { t, language } = useLanguage();
+  const projects = projectsForLanguage(language);
   const featured = projects.filter((project) => project.featured);
   if (
     projects.length === 0 &&
@@ -14,8 +17,13 @@ export function Work() {
   return (
     <Section id="work" className="work-section">
       <div className="section-heading">
-        <h2>Projelerim.</h2>
-        <p>Belirli bir ihtiyaca odaklanan sistemler, arayüzler ve deneyler.</p>
+        <h2>{t("Projelerim.", "My projects.")}</h2>
+        <p>
+          {t(
+            "Belirli bir ihtiyaca odaklanan sistemler, arayüzler ve deneyler.",
+            "Systems, interfaces, and experiments built around specific needs.",
+          )}
+        </p>
       </div>
       {featured.length ? (
         <ProjectGrid items={featured} />

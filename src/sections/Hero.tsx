@@ -1,6 +1,6 @@
+import { useLanguage, useSite } from "../app/useLanguage";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { site } from "../data/site";
 import { projects } from "../data/projects";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 import { duration, ease } from "../lib/motion";
@@ -11,6 +11,8 @@ import { HeroBackdrop } from "./HeroBackdrop";
 import "@fontsource-variable/geist";
 
 export function Hero() {
+  const { t } = useLanguage();
+  const site = useSite();
   const reduce = useReducedMotion();
   const initial = reduce ? false : { opacity: 0, y: 22 };
   return (
@@ -54,7 +56,8 @@ export function Hero() {
                       className="action-link glass-button glass-button--primary"
                       to="/#work"
                     >
-                      Projelerimi incele <span aria-hidden="true">→</span>
+                      {t("Projelerimi incele", "Explore my projects")}
+                      <span aria-hidden="true">→</span>
                     </Link>
                   </Magnetic>
                 ) : (
@@ -63,12 +66,14 @@ export function Hero() {
                       className="action-link glass-button glass-button--primary"
                       to="/about"
                     >
-                      Hakkımda <span aria-hidden="true">→</span>
+                      {t("Hakkımda", "About")}
+                      <span aria-hidden="true">→</span>
                     </TransitionLink>
                   </Magnetic>
                 )}
                 <Link className="action-link glass-button" to="/#contact">
-                  İletişime geç <span aria-hidden="true">→</span>
+                  {t("İletişime geç", "Get in touch")}
+                  <span aria-hidden="true">→</span>
                 </Link>
               </div>
               <div className="hero__profiles">
@@ -83,7 +88,7 @@ export function Hero() {
                   LinkedIn ↗
                 </a>
                 <a href={site.cv} download>
-                  CV’yi indir ↓
+                  {t("CV’yi indir ↓", "Download CV ↓")}
                 </a>
               </div>
             </motion.div>

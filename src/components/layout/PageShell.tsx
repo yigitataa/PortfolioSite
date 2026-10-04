@@ -1,3 +1,4 @@
+import { useLanguage } from "../../app/useLanguage";
 import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router";
@@ -7,6 +8,7 @@ import { Footer } from "./Footer";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 export function PageShell({ children }: { children: ReactNode }) {
+  const { t } = useLanguage();
   const location = useLocation();
   const reduceMotion = useReducedMotion();
   const previousLocation = useRef(location.key);
@@ -35,7 +37,7 @@ export function PageShell({ children }: { children: ReactNode }) {
   return (
     <>
       <a className="skip-link" href="#main">
-        İçeriğe geç
+        {t("İçeriğe geç", "Skip to content")}
       </a>
       <header>
         <FloatingNav />

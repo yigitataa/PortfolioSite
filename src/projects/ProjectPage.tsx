@@ -1,11 +1,14 @@
 import { useParams } from "react-router";
-import { projectDetails } from "../data/projectDetails";
+import { projectDetailsForLanguage } from "../data/projectDetails";
+import { useLanguage } from "../app/useLanguage";
 import { site } from "../data/site";
 import { Seo } from "../app/Seo";
 import { NotFoundPage } from "../app/NotFoundPage";
 import { ProjectDetail } from "./ProjectDetail";
 
 export default function ProjectPage() {
+  const { language } = useLanguage();
+  const projectDetails = projectDetailsForLanguage(language);
   const { slug } = useParams();
   const sorted = [...projectDetails].sort(
     (a, b) => (a.order ?? 999) - (b.order ?? 999),
